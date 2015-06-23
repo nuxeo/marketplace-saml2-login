@@ -1,0 +1,41 @@
+<project name="saml2-assembly"
+         default="build"
+         xmlns:nx="urn:nuxeo-build"
+         xmlns:artifact="urn:nuxeo-artifact">
+  <taskdef resource="org/nuxeo/build/antlib.xml" uri="urn:nuxeo-build" />
+  <taskdef resource="org/nuxeo/build/artifact/antlib.xml" uri="urn:nuxeo-artifact" />
+
+  <property name="outdir" value="${maven.project.build.directory}" />
+
+  <target name="build" description="Build Nuxeo SAML 2.0 Authentication Marketplace Package">
+    <tstamp />
+    <delete failonerror="false" dir="${outdir}/marketplace" />
+    <mkdir dir="${outdir}/marketplace" />
+    <copy todir="${outdir}/marketplace">
+      <fileset dir="src/main/resources" />
+      <filterset>
+        <filter token="VERSION" value="${maven.project.version}" />
+        <filter token="DISTRIB_VERSION" value="${nuxeo.distribution.version}" />
+      </filterset>
+    </copy>
+
+    <copy todir="${outdir}/marketplace/install/bundles">
+      <artifact:resolveFile key="org.nuxeo.ecm.platform:nuxeo-platform-login-saml2::jar" />
+    </copy>
+
+    <copy todir="${outdir}/marketplace/install/lib">
+      <artifact:resolveFile key="org.owasp.esapi:esapi::jar" />
+      <artifact:resolveFile key="ca.juliusdavies:not-yet-commons-ssl::jar" />
+      <artifact:resolveFile key="org.opensaml:opensaml" />
+      <artifact:resolveFile key="org.opensaml:openws" />
+      <artifact:resolveFile key="org.apache.santuario:xmlsec" />
+      <artifact:resolveFile key="org.opensaml:xmltooling" />
+    </copy>
+
+    <zip destfile="${outdir}/${maven.project.artifactId}-${maven.project.version}.zip"
+         basedir="${outdir}/marketplace" />
+    <artifact:attach file="${outdir}/${maven.project.artifactId}-${maven.project.version}.zip"
+                     type="zip" />
+  </target>
+
+</project>

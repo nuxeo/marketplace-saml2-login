@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package type="addon" name="saml2-authentication" version="@VERSION@">
+  <title>SAML 2.0 Authentication</title>
+  <description>Enable SAML 2.0 authentication in Nuxeo</description>
+  <vendor>Nuxeo</vendor>
+  <home-page>https://doc.nuxeo.com/x/QIVkAQ</home-page>
+  <installer restart="true" />
+  <uninstaller restart="true" />
+  <nuxeo-validation>none</nuxeo-validation>
+  <production-state>testing</production-state>
+  <supported>true</supported>
+  <platforms>
+    <platform>cap-@DISTRIB_VERSION@</platform>
+    <platform>cap-@DISTRIB_VERSION@-HF*</platform>
+  </platforms>
+  <license>LGPL 2.1</license>
+  <license-url>http://www.gnu.org/licenses/lgpl-2.1.html</license-url>
+  <visibility>PUBLIC</visibility>
+</package>
