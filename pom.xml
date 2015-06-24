@@ -23,6 +23,7 @@
         <groupId>org.nuxeo.marketplace.saml2</groupId>
         <artifactId>marketplace-saml2-login</artifactId>
         <version>${project.version}</version>
+        <type>zip</type>
       </dependency>
     </dependencies>
   </dependencyManagement>
