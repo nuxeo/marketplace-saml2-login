@@ -17,7 +17,7 @@
     </copy>
 
     <copy todir="${outdir}/marketplace/install/bundles">
-      <artifact:resolveFile key="org.nuxeo.ecm.platform:nuxeo-platform-login-saml2::jar" />
+      <artifact:file key="org.nuxeo.ecm.platform:nuxeo-platform-login-saml2::jar" />
     </copy>
 
     <copy todir="${outdir}/marketplace/install/lib">
