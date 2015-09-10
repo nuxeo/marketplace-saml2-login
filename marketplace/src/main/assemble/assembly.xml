@@ -20,6 +20,10 @@
       <artifact:file key="org.nuxeo.ecm.platform:nuxeo-platform-login-saml2::jar" />
     </copy>
 
+    <copy todir="${outdir}/marketplace/install/bundles">
+      <artifact:file key="org.nuxeo.ecm.platform:nuxeo-usermapper::jar" />
+    </copy>
+
     <copy todir="${outdir}/marketplace/install/lib">
       <artifact:resolveFile key="org.owasp.esapi:esapi::jar" />
       <artifact:resolveFile key="ca.juliusdavies:not-yet-commons-ssl::jar" />
