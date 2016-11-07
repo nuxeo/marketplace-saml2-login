@@ -14,7 +14,7 @@
 
   <modules>
     <module>marketplace</module>
-    <module>ftest/webdriver</module>
+    <module>ftest/startup</module>
   </modules>
 
   <dependencyManagement>
