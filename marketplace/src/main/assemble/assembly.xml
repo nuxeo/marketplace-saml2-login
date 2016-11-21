@@ -5,7 +5,6 @@
 
   <target name="build" description="Build Nuxeo Package">
     <property name="outdir" value="${maven.project.build.directory}"/>
-    <!-- Include your artifacts in the graph adding your groupId to groupPrefixes -->
     <artifact:nuxeo-expand includeTestScope="true" groupPrefixes="org.nuxeo"/>
     <!-- For Nuxeo IDE being able to use that distribution as a SDK -->
     <artifact:print output="${outdir}/artifacts.properties" mode="sdk"/>
@@ -61,7 +60,6 @@
           <artifact scope="provided" />
           <artifact type="pom" />
           <artifact groupId="nuxeo-studio" />
-          <!-- Filter out your artifacts using their groupId for instance -->
         </excludes>
       </artifact:set>
     </copy>
@@ -77,11 +75,11 @@
       file2="${outdir}/nuxeo-nxr-server-${nuxeo.distribution.version}.zip"
       includesfile="${outdir}/includes"
       excludesfile="${outdir}/excludesfile"
-      patternsetid="sample.versus.cap"
+      patternsetid="saml2.versus.server"
       ignoreContent="false"
       ignoreContentPattern=".*\.jar$"></nx:zipdiff>
     <unzip src="${outdir}/nxr-${maven.project.version}.zip" dest="${outdir}/marketplace/install">
-      <patternset refid="sample.versus.cap"/>
+      <patternset refid="saml2.versus.server"/>
     </unzip>
 
     <!-- Generate install.xml content -->
