@@ -3,7 +3,7 @@
   <title>SAML 2.0 Authentication</title>
   <description>The Nuxeo SAML 2.0 addon allows to let your users authenticate against a SAML identity provider, potentially offering Web SSO with other systems that would also integrate with the same provider.</description>
   <vendor>Nuxeo</vendor>
-  <home-page>https://doc.nuxeo.com/x/QIVkAQ</home-page>
+  <home-page>https://doc.nuxeo.com/nxdoc/saml-20-authentication/</home-page>
   <installer restart="true" />
   <uninstaller restart="true" />
   <nuxeo-validation>none</nuxeo-validation>
