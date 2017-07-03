@@ -6,8 +6,8 @@
   <home-page>https://doc.nuxeo.com/nxdoc/saml-20-authentication/</home-page>
   <installer restart="true" />
   <uninstaller restart="true" />
-  <nuxeo-validation>none</nuxeo-validation>
-  <production-state>testing</production-state>
+  <nuxeo-validation>primary_validation</nuxeo-validation>
+  <production-state>production_ready</production-state>
   <supported>true</supported>
   <platforms>
     <platform>server-@DISTRIB_VERSION@</platform>
