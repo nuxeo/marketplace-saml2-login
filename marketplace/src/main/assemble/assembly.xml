@@ -37,7 +37,7 @@
       <artifact:set>
         <includes>
           <artifact groupId="org.nuxeo*" />
-          <artifact groupId="nuxeo-studio" />          
+          <artifact groupId="nuxeo-studio" />
         </includes>
         <excludes>
           <artifact groupId="${maven.project.groupId}" artifactId="${maven.project.artifactId}" version="${maven.project.version}" type="${maven.project.packaging}"/>
@@ -131,6 +131,10 @@
         <filter token="TEMPLATES" value="${install.templates}"/>
       </filterset>
     </copy>
+
+    <nx:studioExtraction todir="${outdir}/marketplace">
+      <fileset dir="${outdir}/marketplace/install/bundles"/>
+    </nx:studioExtraction>
 
     <zip destfile="${outdir}/${maven.project.artifactId}-${maven.project.version}.zip" basedir="${outdir}/marketplace"/>
     <artifact:attach file="${outdir}/${maven.project.artifactId}-${maven.project.version}.zip" type="zip"/>
