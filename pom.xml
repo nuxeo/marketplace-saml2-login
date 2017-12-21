@@ -3,14 +3,14 @@
   <parent>
     <groupId>org.nuxeo.ecm.distribution</groupId>
     <artifactId>nuxeo-distribution</artifactId>
-    <version>9.10-SNAPSHOT</version>
+    <version>9.10</version>
   </parent>
 
   <groupId>org.nuxeo.marketplace.saml2</groupId>
   <artifactId>parent</artifactId>
   <packaging>pom</packaging>
   <name>Nuxeo SAML 2 Authentication Marketplace Parent</name>
-  <version>1.3.3-SNAPSHOT</version>
+  <version>1.3.3</version>
 
   <modules>
     <module>marketplace</module>
