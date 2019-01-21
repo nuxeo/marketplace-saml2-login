@@ -10,7 +10,7 @@
   <artifactId>parent</artifactId>
   <packaging>pom</packaging>
   <name>Nuxeo SAML 2 Authentication Marketplace Parent</name>
-  <version>1.4.3</version>
+  <version>1.4.4-SNAPSHOT</version>
 
   <modules>
     <module>marketplace</module>
